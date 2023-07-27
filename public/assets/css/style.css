@@ -177,10 +177,7 @@
     }
 }
 
-.page-header {
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/carousel-1.jpg) center center no-repeat;
-    background-size: cover;
-}
+
 
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);

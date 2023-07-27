@@ -6,7 +6,8 @@
                     <h4 class="text-white mb-4">Our Office</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Head Office: Birgunj</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+977 9855036545</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>omkalpataru.brj@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>omkalpataru.brj@gmail.com<br>
+                    hamal.mahesh45@gmail.com</p>
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
                                 class="fab fa-twitter"></i></a>
@@ -56,13 +57,13 @@
     <div class="container-fluid copyright py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-medium text-light" href="#">Om Kalapataru Carriers Pvt.Ltd</a>, All Right Reserved.
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 text-light">
+                    &copy; <?php echo date('Y')?> <a class="fw-medium text-light" href="{{url('/')}}">Om Kalapataru Carriers Pvt.Ltd</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="fw-medium text-light" href="https://htmlcodex.com">Hancie Phago and Nitesh Hamal</a>
-                    Distributed By <a class="fw-medium text-light" href="https://themewagon.com">Tech Revo Nepal</a>
+                    Designed By <a class="fw-medium text-light" target="_blank" href="https://www.hancie-phago.com.np/">Hancie Phago</a>
+                    Distributed By <a class="fw-medium text-light" target="_blank" href="https://techrevonepal.hancie-phago.com.np/">Tech Revo Nepal</a>
                 </div>
             </div>
         </div>
