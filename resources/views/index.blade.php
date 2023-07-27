@@ -216,7 +216,7 @@
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium text-primary">Our Services</p>
-                <h1 class="display-5 mb-5">Digital Marketing Services that We Offer</h1>
+                <h1 class="display-5 mb-5">Transport Services that We Offer</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -224,16 +224,20 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
+                                <span class="material-symbols-outlined bx-lg text-primary">
+                                    local_shipping
+                                </span>
                             </div>
-                            <h5 class="mb-3">Digital Marketing</h4>
-                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                    stet</p>
+                            <h5 class="mb-3">Freight Transport</h4>
+                                <p class="mb-0">The company specializes in the transportation of various types of goods
+                                    and commodities and
+                                    transport from one location to another.</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
                             <a class="text-primary fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -241,16 +245,20 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                                <span class="material-symbols-outlined bx-lg text-primary">
+                                    production_quantity_limits
+                                </span>
                             </div>
-                            <h5 class="mb-3">Internet Marketing</h4>
-                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                    stet</p>
+                            <h5 class="mb-3">Cross-Border Logistics</h4>
+                                <p class="mb-0">With its head office located at Birgunj and Biratnagar, a major border
+                                    town, the
+                                    company excels in cross-border logistics between Nepal and India.</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
                             <a class="text-primary fw-medium" href="">Read More<i
                                     class="bi bi-chevron-double-right ms-2"></i></a>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -258,11 +266,14 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon">
+                                <span class="material-symbols-outlined bx-lg text-primary">
+                                    local_shipping
+                                </span>
                             </div>
-                            <h5 class="mb-3">Content Marketing</h4>
-                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                    stet</p>
+                            <h5 class="mb-3">Full Truck Load (FTL) Services</h4>
+                                <p class="mb-0">Om Kalapataru Carriers Pvt. Ltd. provides dedicated full truckload
+                                    services to
+                                    customers who require an entire truck to transport their goods.</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
                             <a class="text-primary fw-medium" href="">Read More<i
@@ -275,11 +286,14 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                                <span class="material-symbols-outlined bx-lg text-primary">
+                                    local_shipping
+                                </span>
                             </div>
-                            <h5 class="mb-3">Social Marketing</h4>
-                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                    stet</p>
+                            <h5 class="mb-3">Less Than Truckload (LTL) Services</h4>
+                                <p class="mb-0">For smaller shipments that do not require an entire truck, The Om
+                                    Kalapataru Carriers
+                                    offers Less Than Truckload services.</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
                             <a class="text-primary fw-medium" href="">Read More<i
@@ -292,11 +306,13 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon">
+                                <span class="material-symbols-outlined bx-lg text-primary">
+warehouse
+</span>
                             </div>
-                            <h5 class="mb-3">B2B Marketing</h4>
-                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                    stet</p>
+                            <h5 class="mb-3">Warehousing and Storage</h4>
+                                <p class="mb-0">The company may also provide warehousing and storage facilities for
+                                    customers who need to store their goods temporarily before onward delivery. </p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
                             <a class="text-primary fw-medium" href="">Read More<i
@@ -309,11 +325,14 @@
                         <div class="service-text rounded p-5">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/icon-10.png" alt="Icon">
+                                <span class="material-symbols-outlined bx-lg text-primary">
+                                    local_shipping
+                                </span>
                             </div>
-                            <h5 class="mb-3">E-mail Marketing</h4>
-                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                    stet</p>
+                            <h5 class="mb-3">Express Delivery Services</h4>
+                                <p class="mb-0">For time-sensitive shipments, Om Kalapataru Pvt. Ltd. offers express
+                                    delivery services. This ensures that urgent shipments reach their destination
+                                    quickly and on time.</p>
                         </div>
                         <div class="service-btn rounded-0 rounded-bottom">
                             <a class="text-primary fw-medium" href="">Read More<i
