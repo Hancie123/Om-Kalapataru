@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/branches',function(){
     return view('branches');
 });
+
+Route::get('/services',function(){
+    return view('services');
+});

@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @push('title')
     <title>Om Kalpataru Carriers Pvt.Ltd</title>
     <meta name="description"
-        content="Om Kalpataru Carriers Pvt.Ltd is a transport company of Nepal which is established in 2079. This transport company provides services in different part of Nepal.">
+        content="Welcome to Om Kalapataru Pvt. Ltd, a trusted and efficient transport company in Nepal. We specialize in carrying products from India to various parts of Nepal. With a strong presence across the country, our branches in Birgunj, Birtamode, Damak, Ithari, and Biratnagar ensure reliable transportation services. Contact us for prompt assistance and support.">
     <meta name="keywords"
-        content="Om Kalpataru Carriers Pvt.Ltd, Om Transport, Om Kalpataru, Om Kalpataru Carriers, Hancie Phago, Nitesh Hamal, NH Group, Mahesh Hamal, Om Chaudary">
+        content="transport company, Nepal, India to Nepal transportation, reliable transport, Birgunj, Birtamode, Damak, Ithari, Biratnagar">
     <meta name="author" content="Hancie Phago | Nitesh Hamal">
 
     @include('layouts.header')
@@ -506,17 +507,11 @@
 
 
 
-
-
-
-
-
     <!-- Testimonial Start -->
     <div class="container-xxl pt-5">
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-primary">Testimonial</p>
                 <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
@@ -565,9 +560,9 @@
 
 
 
-    
 
-   
+
+
 
 
     @include('layouts/footer')

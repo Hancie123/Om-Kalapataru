@@ -4,11 +4,14 @@
 <head>
     <meta charset="utf-8">
     @push('title')
-    <title>Om Kalpataru Carriers Pvt.Ltd</title>
+    <title>Om Kalpataru Carriers Pvt.Ltd | Branches</title>
     <meta name="description"
-        content="Om Kalpataru Carriers Pvt.Ltd is a transport company of Nepal which is established in 2079. This transport company provides services in different part of Nepal.">
+        content="Welcome to Om Kalapataru Pvt. Ltd, your premier transport company in Nepal
+         with a strong and reliable presence across the nation. Established in 2079 B.S., 
+         we take immense pride in being one of the best transport service providers in the country.">
     <meta name="keywords"
-        content="Om Kalpataru Carriers Pvt.Ltd, Om Transport, Om Kalpataru, Om Kalpataru Carriers, Hancie Phago, Nitesh Hamal, NH Group, Mahesh Hamal, Om Chaudary">
+        content="Om Kalpataru Carriers Pvt.Ltd, Om Transport, Om Kalpataru,
+         Om Kalpataru Carriers, Hancie Phago, Nitesh Hamal, NH Group, Mahesh Hamal, Om Chaudary, Om Kalapataru Carriers Branches">
     <meta name="author" content="Hancie Phago | Nitesh Hamal">
 
     @include('layouts.header')
@@ -64,13 +67,27 @@
                 <div class="list-group">
                     <a id="branchlist" href="#" class="list-group-item list-group-item-action">1. Adarshanagar, Birgunj
                         Booking<br>
-                        Umesh Chaudary
+                        Branch Incharge: Umesh Chaudary<br>
                         Ph no: 9845257819<br>
-                        Om Chaudary Ph no: 9855024126</a>
-                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">Ithari</a>
-                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">Biratnagar</a>
-                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">Damak</a>
-                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">Birtamode</a>
+                        Branch Incharge: Om Chaudary<br> Ph no: 9855024126</a>
+                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">2. Ithari<br>
+                        Branch Incharge: Bhola Chaudary<br>
+                        Ph no: 9855024113</a>
+                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">3. Biratnagar (Near
+                        Bhat-Bhateni)<br>
+                        Branch Incharge: Sumit Pokhrel<br>
+                        Tel: 021590960<br>
+                        Ph no: 9852039545</a>
+                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">4. Damak<br>
+                        Branch Incharge: Sanjay Mandal<br>
+                        Tel: 023-582153<br>
+                        Ph no: 9801715691</a>
+                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">5. Birtamode<br>
+                        Branch Incharge: Madav Dahal<br>
+                        Tel: 023-540129<br>
+                        Ph no: 9852639545<br>
+                        Ph no: 9801715692
+                    </a>
                 </div>
 
 
@@ -84,7 +101,7 @@
 
     <style>
     #map {
-        height: 70vh;
+        height: 80vh;
     }
 
     #branchlist {
