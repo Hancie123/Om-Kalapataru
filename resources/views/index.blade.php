@@ -13,6 +13,7 @@
     <meta name="author" content="Hancie Phago | Nitesh Hamal">
 
     @include('layouts.header')
+    @livewireStyles
 </head>
 
 <body>
@@ -563,7 +564,7 @@
 
 
 
-
+@livewireScripts
 
     @include('layouts/footer')
 </body>

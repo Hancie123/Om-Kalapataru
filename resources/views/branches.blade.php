@@ -13,7 +13,7 @@
         content="Om Kalpataru Carriers Pvt.Ltd, Om Transport, Om Kalpataru,
          Om Kalpataru Carriers, Hancie Phago, Nitesh Hamal, NH Group, Mahesh Hamal, Om Chaudary, Om Kalapataru Carriers Branches">
     <meta name="author" content="Hancie Phago | Nitesh Hamal">
-
+@livewireStyles
     @include('layouts.header')
 </head>
 
@@ -164,7 +164,7 @@
     });
     </script>
 
-
+@livewireScripts
     @include('layouts/footer')
 </body>
 

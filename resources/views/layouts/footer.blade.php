@@ -61,7 +61,6 @@
                     &copy; <?php echo date('Y')?> <a class="fw-medium text-light" href="{{url('/')}}">Om Kalapataru Carriers Pvt.Ltd</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     Designed By <a class="fw-medium text-light" target="_blank" href="https://www.hancie-phago.com.np/">Hancie and Nitesh Hamal</a>
                     Distributed By <a class="fw-medium text-light" target="_blank" href="https://techrevonepal.hancie-phago.com.np/">Tech Revo Nepal</a>
                 </div>
