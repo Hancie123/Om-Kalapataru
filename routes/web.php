@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\contactcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::get('/branches',function(){
 Route::get('/services',function(){
     return view('services');
 });
+
+Route::get('/contact',[contactcontroller::class,'contact']);
