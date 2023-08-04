@@ -23,7 +23,7 @@
                                 <a href="team.html" class="dropdown-item" wire:navigate>Our Vision</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="{{url('/contact')}}" class="nav-item nav-link" wire:navigate>Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
                         <a href="" class="btn btn-primary rounded-pill py-2 px-3">Login</a>
