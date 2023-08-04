@@ -28,7 +28,41 @@
     @include('layouts/topbar')
 
 
-    @include('layouts/navbar')
+   <!-- Navbar Start -->
+<div class="container-fluid bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+                <a href="index.html" class="navbar-brand d-lg-none">
+                    <h1 class="fw-bold m-0">Om Kalapataru</h1>
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="{{url('/')}}" class="nav-item nav-link" wire:navigate.hover>Home</a>
+                        <a href="{{url('branches')}}" class="nav-item nav-link" wire:navigate>Branches</a>
+                        <a href="{{url('/services')}}" class="nav-item nav-link" wire:navigate>Services</a>
+                        <a href="project.html" class="nav-item nav-link" wire:navigate>Gallery</a>
+                        <a href="project.html" class="nav-item nav-link" wire:navigate>Staffs</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="feature.html" class="dropdown-item" wire:navigate>Company Profile</a>
+                                <a href="team.html" class="dropdown-item" wire:navigate>Our Vision</a>
+                            </div>
+                        </div>
+                        <a href="{{url('/contact')}}" class="nav-item nav-link active" wire:navigate>Contact</a>
+                    </div>
+                    <div class="ms-auto d-none d-lg-block">
+                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
     <style>
     .page-header {
         background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../assets/img/abstract-dark-blue-futuristic-digital-grid-background.jpg) center center no-repeat;
@@ -60,9 +94,14 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h3 class="mb-4">Need a functional contact form?</h3>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <livewire:contact/>
+                    <h3 class="mb-4">Get in Touch with Om Kalpataru Carriers</h3>
+                    <p class="mb-4">Feel free to reach out to us using the contact form below. We value your inquiries
+                        and look forward to discussing how Om Kalpataru Carriers can optimize your transportation
+                        operations and add value to your supply chain. Let's embark on a journey of seamless logistics
+                        solutions together!</p>
+
+
+                    <livewire:contact />
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <h3 class="mb-4">Contact Details</h3>
@@ -94,10 +133,10 @@
                         </div>
                     </div>
 
-                    <iframe class="w-100 rounded"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                    frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1339.1364490516353!2d87.99763382225414!3d26.64366503423601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1691158685817!5m2!1sen!2snp"
+                        width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

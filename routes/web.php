@@ -28,3 +28,4 @@ Route::get('/services',function(){
 });
 
 Route::get('/contact',[contactcontroller::class,'contact']);
+Route::get('/contact/sendemail',[contactcontroller::class,'sendemail']);

@@ -10,4 +10,6 @@ class ContactModel extends Model
     use HasFactory;
     protected $table="contact";
     protected $primaryKey="contact_id";
+
+    protected $fillable=['name','email','subject','message'];
 }
