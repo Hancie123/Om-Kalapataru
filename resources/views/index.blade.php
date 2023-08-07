@@ -11,7 +11,7 @@
     <meta name="keywords"
         content="transport company, Nepal, India to Nepal transportation, reliable transport, Birgunj, Birtamode, Damak, Ithari, Biratnagar">
     <meta name="author" content="Hancie Phago | Nitesh Hamal">
-
+    <meta name="msvalidate.01" content="DF72CCC73368653D7969F211C150B6D7" />
     @include('layouts.header')
     @livewireStyles
 </head>

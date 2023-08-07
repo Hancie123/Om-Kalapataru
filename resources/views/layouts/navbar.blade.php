@@ -11,19 +11,19 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="{{url('/')}}" class="nav-item nav-link active" wire:navigate.hover>Home</a>
-                        <a href="{{url('branches')}}" class="nav-item nav-link" wire:navigate>Branches</a>
-                        <a href="{{url('/services')}}" class="nav-item nav-link" wire:navigate>Services</a>
+                        <a href="{{url('/')}}" class="nav-item nav-link {{ request()->is('/') ? ' active' : '' }}" wire:navigate.hover>Home</a>
+                        <a href="{{url('branches')}}" class="nav-item nav-link {{ request()->is('branches') ? ' active' : '' }}" wire:navigate>Branches</a>
+                        <a href="{{url('/services')}}" class="nav-item nav-link {{ request()->is('services') ? ' active' : '' }}" wire:navigate>Services</a>
                         <a href="project.html" class="nav-item nav-link" wire:navigate>Gallery</a>
                         <a href="project.html" class="nav-item nav-link" wire:navigate>Staffs</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="feature.html" class="dropdown-item" wire:navigate>Company Profile</a>
-                                <a href="team.html" class="dropdown-item" wire:navigate>Our Vision</a>
+                                <a href="{{url('/about-company')}}" class="dropdown-item" wire:navigate>About Company</a>
+                                <a href="{{url('/company-vision')}}" class="dropdown-item" wire:navigate>Company Vision</a>
                             </div>
                         </div>
-                        <a href="{{url('/contact')}}" class="nav-item nav-link" wire:navigate>Contact</a>
+                        <a href="{{url('/contact')}}" class="nav-item nav-link {{ request()->is('contact') ? ' active' : '' }}" wire:navigate>Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
                         <a href="" class="btn btn-primary rounded-pill py-2 px-3">Login</a>

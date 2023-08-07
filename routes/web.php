@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\contactcontroller;
+use App\Http\Controllers\aboutcompanycontroller;
+use App\Http\Controllers\companyvisioncontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +31,6 @@ Route::get('/services',function(){
 
 Route::get('/contact',[contactcontroller::class,'contact']);
 Route::get('/contact/sendemail',[contactcontroller::class,'sendemail']);
+
+Route::get('/about-company',[aboutcompanycontroller::class,'aboutcompany']);
+Route::get('/company-vision',[companyvisioncontroller::class,'companyvision']);
