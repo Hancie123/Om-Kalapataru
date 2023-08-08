@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Om Kalpataru Carriers Pvt.Ltd</title>
+    <title>Om Kalpataru Carriers Pvt.Ltd | Login System</title>
     <link rel="icon" href="{{asset('assets/img/logo.png')}}" />
     @extends('layouts/loginheader')
     @livewireStyles
@@ -22,8 +22,24 @@
                             </div>
                             <h4>Hello! let's get started</h4>
                             <h6 class="font-weight-light mt-1">Sign in to continue.</h6>
+
+
+
+
                             <form class="pt-3" method="post" action="/login">
                                 @csrf
+
+                                @if(Session()->has('fail'))
+                                <div class="alert alert-danger">
+                                    {{Session()->get('fail')}}
+                                </div>
+                                @endif
+                                @if(Session()->has('success'))
+                                <div class="alert alert-success">
+                                    {{Session()->get('success')}}
+                                </div>
+                                @endif
+
                                 <div class="form-group">
                                     <x-bladewind.input type="email" name="email" required="true" label="Email" />
                                     @error('email')
@@ -47,7 +63,7 @@
                                 </div>
                                 <div class="my-2 d-flex justify-content-between align-items-center">
 
-                                    <a href="#" class="auth-link text-black">Forgot password?</a>
+                                    <a href="{{url('/login/forgot-password')}}" class="auth-link text-black" wire:navigate>Forgot password?</a>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
                                     <a href="{{ url()->previous() }}" wire:navigate>Back</a>

@@ -5,6 +5,7 @@ use App\Http\Controllers\contactcontroller;
 use App\Http\Controllers\aboutcompanycontroller;
 use App\Http\Controllers\companyvisioncontroller;
 use App\Http\Controllers\logincontroller;
+use App\Http\Controllers\ResetPasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,8 @@ Route::get('/company-vision',[companyvisioncontroller::class,'companyvision']);
 
 Route::get('/login',[logincontroller::class,'login']);
 Route::post('/login',[logincontroller::class,'loginauthenticate']);
+
+Route::get('/login/forgot-password',[ResetPasswordController::class,'forgot_password']);
+Route::post('/login/forgot-password',[ResetPasswordController::class,'submitForgetPasswordForm']);
+Route::get('reset-password/{token}', [ResetPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ResetPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
