@@ -48,28 +48,32 @@
             <div class="main-panel">
                 <div class="content-wrapper">
                     <h1>hy</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    @include('layouts/adminfooter')
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
         <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
 
-    @include('layouts/adminfooter')
     @livewireScripts
 </body>
 

@@ -1,3 +1,5 @@
+
+<p class="text-center m-0 p-1 bg-primary w-100 text-light w3-display-bottommiddle">Developed by Hancie Phago and Nitesh Hamal</p>
 <!-- plugins:js -->
 <script src="{{asset('assets/js/vendor.bundle.base.js')}}"></script>
     <!-- endinject -->
