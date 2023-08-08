@@ -33,7 +33,7 @@ class logincontroller extends Controller
         }
 
         if($user->password==$request->password && $user->status=='Active'){
-            return back()->with('success','Welcome');
+            return redirect('home/dashboard')->with('success','Welcome');
 
         }
         else {

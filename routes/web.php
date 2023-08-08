@@ -6,6 +6,7 @@ use App\Http\Controllers\aboutcompanycontroller;
 use App\Http\Controllers\companyvisioncontroller;
 use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\dashboardcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,6 @@ Route::get('/login/forgot-password',[ResetPasswordController::class,'forgot_pass
 Route::post('/login/forgot-password',[ResetPasswordController::class,'submitForgetPasswordForm']);
 Route::get('reset-password/{token}', [ResetPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('reset-password', [ResetPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
+
+Route::get('/home/dashboard',[dashboardcontroller::class,'dashbaord']);
