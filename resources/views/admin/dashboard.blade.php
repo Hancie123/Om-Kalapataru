@@ -5,8 +5,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Skydash Admin</title>
+    <title>Om Kalpataru Carriers | Dashboard</title>
     @include('layouts/adminheader')
+    @livewireStyles
 </head>
 
 <body>
@@ -16,9 +17,10 @@
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_settings-panel.html -->
             <div class="theme-setting-wrapper">
-                <div id="settings-trigger"><i class="ti-settings"></i></div>
+                <div id="settings-trigger"><i class='bx bx-cog'></i></div>
                 <div id="theme-settings" class="settings-panel">
-                    <i class="settings-close ti-close"></i>
+
+                    <i class='bx bx-x-circle settings-close'></i>
                     <p class="settings-heading">SIDEBAR SKINS</p>
                     <div class="sidebar-bg-options selected" id="sidebar-light-theme">
                         <div class="img-ss rounded-circle bg-light border mr-3"></div>Light
@@ -37,6 +39,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="right-sidebar" class="settings-panel">
                 <h1>Hy</h1>
             </div>
@@ -67,7 +70,7 @@
     <!-- container-scroller -->
 
     @include('layouts/adminfooter')
-
+    @livewireScripts
 </body>
 
 </html>

@@ -5,15 +5,14 @@
     <meta charset="utf-8">
     @push('title')
     <title>Om Kalpataru Carriers Pvt.Ltd | Branches</title>
-    <meta name="description"
-        content="Welcome to Om Kalapataru Pvt. Ltd, your premier transport company in Nepal
+    <meta name="description" content="Welcome to Om Kalapataru Pvt. Ltd, your premier transport company in Nepal
          with a strong and reliable presence across the nation. Established in 2079 B.S., 
          we take immense pride in being one of the best transport service providers in the country.">
     <meta name="keywords"
         content="Om Kalpataru Carriers Pvt.Ltd, Om Transport, Om Kalpataru,
          Om Kalpataru Carriers, Hancie Phago, Nitesh Hamal, NH Group, Mahesh Hamal, Om Chaudary, Om Kalapataru Carriers Branches">
     <meta name="author" content="Hancie Phago | Nitesh Hamal">
-@livewireStyles
+    @livewireStyles
     @include('layouts.header')
 </head>
 
@@ -164,7 +163,7 @@
     });
     </script>
 
-@livewireScripts
+    @livewireScripts
     @include('layouts/footer')
 </body>
 
