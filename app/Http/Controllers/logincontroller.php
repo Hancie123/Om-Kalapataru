@@ -4,11 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Session;
 
 class logincontroller extends Controller
 {
     public function login(){
         return view('login');
+
+    }
+
+    public function logout(Request $request){
+
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        Session::flush();
+        return redirect('/login');
+
     }
 
    
@@ -33,6 +46,7 @@ class logincontroller extends Controller
         }
 
         if($user->password==$request->password && $user->status=='Active'){
+            Session::put('user_id',$user->user_id);
             return redirect('home/dashboard')->with('success','Welcome');
 
         }

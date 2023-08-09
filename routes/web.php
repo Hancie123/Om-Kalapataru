@@ -40,6 +40,7 @@ Route::get('/company-vision',[companyvisioncontroller::class,'companyvision']);
 
 
 Route::get('/login',[logincontroller::class,'login']);
+Route::get('/logout',[logincontroller::class,'logout']);
 Route::post('/login',[logincontroller::class,'loginauthenticate']);
 
 Route::get('/login/forgot-password',[ResetPasswordController::class,'forgot_password']);
@@ -48,4 +49,4 @@ Route::get('reset-password/{token}', [ResetPasswordController::class, 'showReset
 Route::post('reset-password', [ResetPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 
-Route::get('/home/dashboard',[dashboardcontroller::class,'dashbaord']);
+Route::get('/home/dashboard',[dashboardcontroller::class,'dashbaord'])->middleware('sessioncheck');

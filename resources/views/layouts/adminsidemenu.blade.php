@@ -42,7 +42,7 @@
         
 
         <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
+            <a class="nav-link" href="{{url('/logout')}}">
             <i class='bx bx-log-out-circle bx-sm mx-1' ></i>
                 <span class="menu-title">Sign Out</span>
 
