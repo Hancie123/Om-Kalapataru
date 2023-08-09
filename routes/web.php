@@ -38,6 +38,7 @@ Route::get('/contact/sendemail',[contactcontroller::class,'sendemail']);
 
 Route::get('/about-company',[aboutcompanycontroller::class,'aboutcompany']);
 Route::get('/company-vision',[companyvisioncontroller::class,'companyvision']);
+Route::get('/staffs',[staffcontroller::class,'staff']);
 
 
 Route::get('/login',[logincontroller::class,'login']);

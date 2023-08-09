@@ -41,9 +41,12 @@ class StaffComponent extends Component
             'profile_picture' => $path,
             'bio' => $this->bio,
         ]);
+        
 
         
         if(!empty($save)){
+            $this->reset('name', 'email','mobile','address','profile_picture','bio');
+            
             return back()->with('success','You have successfully saved the staff details!');
         }
         else {
