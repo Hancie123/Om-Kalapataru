@@ -9,17 +9,17 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" data-toggle="collapse" href="#my-website" aria-expanded="false" aria-controls="my-website">
                 <span class="material-symbols-outlined bx-sm mx-1">
                     home
                 </span>
                 <span class="menu-title">My Website</span>
                 <i class='bx bx-chevron-right'></i>
             </a>
-            <div class="collapse" id="ui-basic">
+            <div class="collapse" id="my-website">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Announcment</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Staffs</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/home/manage-staff')}}">Staffs</a></li>
                     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Gallery</a></li>
                 </ul>
             </div>

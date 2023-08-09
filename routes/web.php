@@ -7,6 +7,7 @@ use App\Http\Controllers\companyvisioncontroller;
 use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\dashboardcontroller;
+use App\Http\Controllers\staffcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,3 +51,4 @@ Route::post('reset-password', [ResetPasswordController::class, 'submitResetPassw
 
 
 Route::get('/home/dashboard',[dashboardcontroller::class,'dashbaord'])->middleware('sessioncheck');
+Route::get('/home/manage-staff',[staffcontroller::class,'staffmanage'])->middleware('sessioncheck');
