@@ -40,11 +40,11 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">About Us</h1>
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Staffs</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                    <li class="breadcrumb-item text-primary" aria-current="page">About</li>
+                    <li class="breadcrumb-item text-primary" aria-current="page">Staffs</li>
                 </ol>
             </nav>
         </div>
@@ -53,11 +53,44 @@
 
 
     <h1 class="wow fadeInUp text-center" data-wow-delay="0.1s">Om Kalpataru Carrier's Staffs</h1>
+<br><br>
+    <div class="container">
+        <div class="row">
+            @foreach ($alldata as $data)
+            <div class="col-md-2">
 
-    @foreach ($alldata as $data)
-    <h1>{{$data->name}}</h1>
-   <img src="{{ asset('assets/' . $data->profile_picture) }}" alt="Profile Picture" style="width:60px;">
-@endforeach
+
+                <div class="card wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="card-img-top" src="{{ asset('assets/' . $data->profile_picture) }}" alt="Card image"
+                        style="height:15rem;">
+                    <div class="card-body">
+                        <p class="p-0 m-0">Name: {{$data->name}}</p>
+                        <p class="p-0 m-0">Mobile no: {{$data->mobile}}</p>
+                        </p>
+                        <p class="p-0 m-0 text-light bg-primary rounded text-center">Incharge: {{$data->address}}</p>
+                        
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+            @endforeach
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
 
 
     @livewireScripts

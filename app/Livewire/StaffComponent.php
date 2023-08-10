@@ -25,41 +25,43 @@ class StaffComponent extends Component
     #[Rule('image|max:2048')]
     public $profile_pic;
 
-    #[Rule('required')]
+   
     public $bio;
 
-    public function save(){
-        $validatedData = $this->validate();
+    // public function save(){
+    //     $validatedData = $this->validate();
 
-        $path = $this->profile_pic->store('img', 'public');
+    //     $path = $this->profile_pic->store('img', 'public');
 
-        $save= StaffDetailModel::create([
-            'name' => $this->name,
-            'email' => $this->email,
-            'mobile' => $this->mobile,
-            'address' => $this->address,
-            'profile_picture' => $path,
-            'bio' => $this->bio,
-        ]);
+    //     $save= StaffDetailModel::create([
+    //         'name' => $this->name,
+    //         'email' => $this->email,
+    //         'mobile' => $this->mobile,
+    //         'address' => $this->address,
+    //         'profile_picture' => $path,
+    //         'bio' => $this->bio,
+    //     ]);
         
 
         
-        if(!empty($save)){
-            $this->reset('name', 'email','mobile','address','profile_picture','bio');
+    //     if(!empty($save)){
+    //         $this->reset('name', 'email','mobile','address','profile_picture','bio');
             
-            return back()->with('success','You have successfully saved the staff details!');
-        }
-        else {
-            return back()->with('fail','Error Occurred!');
-        }
+    //         return back()->with('success','You have successfully saved the staff details!');
+    //     }
+    //     else {
+    //         return back()->with('fail','Error Occurred!');
+    //     }
         
-
-       
+    // }
+        public $staffDetails;
         
-        
+    public function mount(){
+        $staffDetails = StaffDetailModel::all();
+    $this->staffs = $staffDetails;
     }
     public function render()
     {
-        return view('livewire.staff-component');
+        return view('livewire.staff-component'); 
     }
 }

@@ -64,29 +64,29 @@
                 <p class="text-dark bold">Contact any of our branches using the details below if you need any help.</p>
 
                 <div class="list-group">
-                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">1. Adarshanagar, Birgunj
+                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">1. Adarshanagar, Birgunj
                         Booking<br>
                         Branch Incharge: Umesh Chaudary<br>
                         Ph no: 9845257819<br>
-                        Branch Incharge: Om Chaudary<br> Ph no: 9855024126</a>
-                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">2. Ithari<br>
+                        Branch Incharge: Om Chaudary<br> Ph no: 9855024126</p>
+                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">2. Ithari<br>
                         Branch Incharge: Bhola Chaudary<br>
-                        Ph no: 9855024113</a>
-                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">3. Biratnagar (Near
+                        Ph no: 9855024113</p>
+                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">3. Biratnagar (Near
                         Bhat-Bhateni)<br>
                         Branch Incharge: Sumit Pokhrel<br>
                         Tel: 021590960<br>
-                        Ph no: 9852039545</a>
-                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">4. Damak<br>
+                        Ph no: 9852039545</p>
+                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">4. Damak<br>
                         Branch Incharge: Sanjay Mandal<br>
                         Tel: 023-582153<br>
-                        Ph no: 9801715691</a>
-                    <a id="branchlist" href="#" class="list-group-item list-group-item-action">5. Birtamode<br>
+                        Ph no: 9801715691</p>
+                    <p id="branchlist" class="list-group-item list-group-item-action">5. Birtamode<br>
                         Branch Incharge: Madav Dahal<br>
                         Tel: 023-540129<br>
                         Ph no: 9852639545<br>
                         Ph no: 9801715692
-                    </a>
+</p>
                 </div>
 
 
@@ -105,6 +105,8 @@
 
     #branchlist {
         font-weight: bold;
+        margin:0;
+        
     }
 
     #branchlist:hover {
@@ -128,31 +130,31 @@
             name: 'Birtamode',
             coordinates: [26.64355271750209, 87.99940108305019],
             email: 'hamal.mahesh45@gmail.com',
-            phone: '9825915122'
+            phone: '9855036545'
         },
         {
             name: 'Damak',
             coordinates: [26.660069854885073, 87.69778292026827],
             email: 'hamal.mahesh45@gmail.com',
-            phone: '9825915122'
+            phone: '9855036545'
         },
         {
             name: 'Ithari',
             coordinates: [26.6621, 87.2707],
             email: 'hamal.mahesh45@gmail.com',
-            phone: '9825915122'
+            phone: '9855036545'
         },
         {
             name: 'Biratnagar',
             coordinates: [26.4562, 87.2728],
             email: 'hamal.mahesh45@gmail.com',
-            phone: '9825915122'
+            phone: '9855036545'
         },
         {
             name: 'Birgunj',
             coordinates: [27.0092, 84.8770],
             email: 'hamal.mahesh45@gmail.com',
-            phone: '9825915122'
+            phone: '9855036545'
         }
     ];
 

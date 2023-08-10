@@ -53,3 +53,5 @@ Route::post('reset-password', [ResetPasswordController::class, 'submitResetPassw
 
 Route::get('/home/dashboard',[dashboardcontroller::class,'dashbaord'])->middleware('sessioncheck');
 Route::get('/home/manage-staff',[staffcontroller::class,'staffmanage'])->middleware('sessioncheck');
+Route::post('/home/manage-staff/save',[staffcontroller::class,'saverecord'])->middleware('sessioncheck');
+Route::get('/home/manage-staff/delete/{id}',[staffcontroller::class,'deletestaff'])->middleware('sessioncheck');
