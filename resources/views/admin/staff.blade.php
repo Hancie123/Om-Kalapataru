@@ -49,85 +49,87 @@
                 <div class="content-wrapper">
 
                     <h2>Staff Details</h2>
+                    <div class="container border rounded p-3">
 
 
 
 
-                    <form method="post" action="{{url('/home/manage-staff/save')}}" enctype="multipart/form-data">
-                        @csrf
+                        <form method="post" action="{{url('/home/manage-staff/save')}}" enctype="multipart/form-data">
+                            @csrf
 
-                        <div class="row mb-2">
-                            <div class="col-md-4 mb-2">
-                                <label for="name" class="form-label">Name:</label>
-                                <input type="text" class="form-control form-control-sm" id="name" wire:model.live="name"
-                                    placeholder="Enter name" name="name">
-                                @error('name')
-                                <span class="text-danger">{{$message}}</span>
-                                @enderror
+                            <div class="row mb-2">
+                                <div class="col-md-4 mb-2">
+                                    <label for="name" class="form-label">Name:</label>
+                                    <input type="text" class="form-control form-control-sm" id="name"
+                                        wire:model.live="name" placeholder="Enter name" name="name">
+                                    @error('name')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+
+
+                                <div class="col-md-4 mb-2">
+                                    <label for="email" class="form-label">Email:</label>
+                                    <input type="text" class="form-control form-control-sm" wire:model.live="email"
+                                        id="email" placeholder="Enter email" name="email">
+                                    @error('email')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-4 mb-2">
+                                    <label for="mobile" class="form-label">Mobile:</label>
+                                    <input type="text" class="form-control form-control-sm" wire:model.live="mobile"
+                                        id="mobile" placeholder="Enter mobile" name="mobile">
+                                    @error('mobile')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+
                             </div>
 
 
-                            <div class="col-md-4 mb-2">
-                                <label for="email" class="form-label">Email:</label>
-                                <input type="text" class="form-control form-control-sm" wire:model.live="email"
-                                    id="email" placeholder="Enter email" name="email">
-                                @error('email')
-                                <span class="text-danger">{{$message}}</span>
-                                @enderror
+                            <div class="row">
+
+
+
+
+                                <div class="col-md-4 mb-2">
+                                    <label for="name" class="form-label">Address:</label>
+                                    <input type="text" class="form-control form-control-sm" id="address"
+                                        wire:model.live="address" placeholder="Enter address" name="address">
+                                    @error('address')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-4 mb-2">
+
+                                    <label for="mobile" class="form-label">Profile Pic:</label>
+                                    <input type="file" class="form-control form-control-sm"
+                                        placeholder="Upload profile_pic" name="profile_pic">
+                                    @error('profile_pic')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
+
+                                </div>
+
+                                <div class="col-md-4 mb-2">
+                                    <label for="mobile" class="form-label">Bio:</label>
+                                    <textarea class="form-control form-control-sm" name="bio"
+                                        wire:model.blur="bio"></textarea>
+                                    @error('bio')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
+                                </div>
+
                             </div>
 
-                            <div class="col-md-4 mb-2">
-                                <label for="mobile" class="form-label">Mobile:</label>
-                                <input type="text" class="form-control form-control-sm" wire:model.live="mobile"
-                                    id="mobile" placeholder="Enter mobile" name="mobile">
-                                @error('mobile')
-                                <span class="text-danger">{{$message}}</span>
-                                @enderror
-                            </div>
 
-                        </div>
-
-
-                        <div class="row">
-
-
-
-
-                            <div class="col-md-4 mb-2">
-                                <label for="name" class="form-label">Address:</label>
-                                <input type="text" class="form-control form-control-sm" id="address"
-                                    wire:model.live="address" placeholder="Enter address" name="address">
-                                @error('address')
-                                <span class="text-danger">{{$message}}</span>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-4 mb-2">
-
-                                <label for="mobile" class="form-label">Profile Pic:</label>
-                                <input type="file" class="form-control form-control-sm" 
-                                     placeholder="Upload profile_pic" name="profile_pic">
-                                @error('profile_pic')
-                                <span class="text-danger">{{$message}}</span>
-                                @enderror
-                                
-                            </div>
-
-                            <div class="col-md-4 mb-2">
-                                <label for="mobile" class="form-label">Bio:</label>
-                                <textarea class="form-control form-control-sm" name="bio"
-                                    wire:model.blur="bio"></textarea>
-                                @error('bio')
-                                <span class="text-danger">{{$message}}</span>
-                                @enderror
-                            </div>
-
-                        </div>
-
-
-                        <button type="submit" class="btn btn-primary">Save </button>
-                    </form>
-                    <br>
+                            <button type="submit" class="btn btn-primary">Save </button>
+                        </form>
+                        <br>
+                    </div>
 
                     @if(Session()->has('success'))
                     <div class="alert alert-success">
@@ -140,9 +142,9 @@
                     </div>
                     @endif
 
-                    <div class="container mt-3 rounded">
-                        <table class="table rounded">
-                            <thead>
+                    <div class="container mt-3 rounded border p-3">
+                        <table class="table rounded table-bordered">
+                            <thead class="table-primary">
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
@@ -165,8 +167,8 @@
                                     <td>{{$data->email}}</td>
                                     <td>{{$data->address}}</td>
                                     <td>{{$data->bio}}</td>
-                                    <td><img src="{{asset('assets/'.$data->profile_picture)}}" /></td>
-                                    <td><a href="{{url('/home/manage-staff/delete')}}/{{$data->id}}"
+                                    <td class="text-center"><img src="{{asset('assets/'.$data->profile_picture)}}" /></td>
+                                    <td class="text-center"><a href="{{url('/home/manage-staff/delete')}}/{{$data->id}}"
                                             class="btn btn-primary">Delete</a></td>
                                 </tr>
                                 @endforeach

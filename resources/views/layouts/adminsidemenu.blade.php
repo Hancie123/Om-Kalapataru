@@ -3,7 +3,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link" href="{{url('/home/dashboard')}}" wire:navigate>
+            <a class="nav-link" href="{{url('/home/dashboard')}}">
                 <i class='bx bx-grid-alt mx-1 bx-sm'></i>
                 <span class="menu-title">Dashboard</span>
             </a>
@@ -18,9 +18,9 @@
             </a>
             <div class="collapse" id="my-website">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Announcment</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Announcment</a></li>
                     <li class="nav-item"> <a class="nav-link" href="{{url('/home/manage-staff')}}">Staffs</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Gallery</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/home/gallery')}}">Gallery</a></li>
                 </ul>
             </div>
         </li>

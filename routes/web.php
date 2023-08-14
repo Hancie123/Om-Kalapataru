@@ -8,6 +8,7 @@ use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\dashboardcontroller;
 use App\Http\Controllers\staffcontroller;
+use App\Http\Controllers\gallerycontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +56,8 @@ Route::get('/home/dashboard',[dashboardcontroller::class,'dashbaord'])->middlewa
 Route::get('/home/manage-staff',[staffcontroller::class,'staffmanage'])->middleware('sessioncheck');
 Route::post('/home/manage-staff/save',[staffcontroller::class,'saverecord'])->middleware('sessioncheck');
 Route::get('/home/manage-staff/delete/{id}',[staffcontroller::class,'deletestaff'])->middleware('sessioncheck');
+
+Route::get('/gallery',[gallerycontroller::class,'gallery']);
+Route::get('/home/gallery',[gallerycontroller::class,'admingallery'])->middleware('sessioncheck');
+Route::post('/home/gallery/insert',[gallerycontroller::class,'insertdata'])->middleware('sessioncheck');
+Route::get('/home/gallery/delete/{id}',[gallerycontroller::class,'deletestaff'])->middleware('sessioncheck');

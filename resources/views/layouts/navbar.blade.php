@@ -14,7 +14,7 @@
                         <a href="{{url('/')}}" class="nav-item nav-link {{ request()->is('/') ? ' active' : '' }}" wire:navigate.hover>Home</a>
                         <a href="{{url('branches')}}" class="nav-item nav-link {{ request()->is('branches') ? ' active' : '' }}" wire:navigate>Branches</a>
                         <a href="{{url('/services')}}" class="nav-item nav-link {{ request()->is('services') ? ' active' : '' }}" wire:navigate>Services</a>
-                        <a href="project.html" class="nav-item nav-link" wire:navigate>Gallery</a>
+                        <a href="{{url('/gallery')}}" class="nav-item nav-link {{ request()->is('gallery') ? ' active' : '' }}" wire:navigate>Gallery</a>
                         <a href="{{url('/staffs')}}" class="nav-item nav-link {{ request()->is('staffs') ? ' active' : '' }}" wire:navigate>Staffs</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
