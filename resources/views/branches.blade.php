@@ -64,29 +64,37 @@
                 <p class="text-dark bold">Contact any of our branches using the details below if you need any help.</p>
 
                 <div class="list-group">
-                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">1. Adarshanagar, Birgunj
+                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">1. Adarshanagar,
+                        Birgunj-Biratnagar
                         Booking<br>
                         Branch Incharge: Umesh Chaudary<br>
-                        Ph no: 9845257819<br>
-                        Branch Incharge: Om Chaudary<br> Ph no: 9855024126</p>
-                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">2. Ithari<br>
+                        Ph no: 9855024126<br>
+                         Landline: 051-591414<br>
+                       </p>
+
+                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">2. Birgunj-Birtamode Booking<br>
+                        Branch Incharge: Subash Mahato<br>
+                        Ph no: 9821836821<br>
+                    Landline: 051-591458</p>
+
+                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">3. Ithari (Near Traffic Office)<br>
                         Branch Incharge: Bhola Chaudary<br>
                         Ph no: 9855024113</p>
-                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">3. Biratnagar (Near
+                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">4. Biratnagar (Near
                         Bhat-Bhateni)<br>
                         Branch Incharge: Sumit Pokhrel<br>
                         Tel: 021590960<br>
                         Ph no: 9852039545</p>
-                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">4. Damak<br>
+                    <p id="branchlist" href="#" class="list-group-item list-group-item-action">5. Damak (Near Pashuhaat)<br>
                         Branch Incharge: Sanjay Mandal<br>
-                        Tel: 023-582153<br>
+                        Tel: 023-570153<br>
                         Ph no: 9801715691</p>
-                    <p id="branchlist" class="list-group-item list-group-item-action">5. Birtamode<br>
+                    <p id="branchlist" class="list-group-item list-group-item-action">6. Birtamode (Near B&C Hospital)<br>
                         Branch Incharge: Madav Dahal<br>
-                        Tel: 023-540129<br>
+                        Tel: 023-530129<br>
                         Ph no: 9852639545<br>
                         Ph no: 9801715692
-</p>
+                    </p>
                 </div>
 
 
@@ -104,9 +112,9 @@
     }
 
     #branchlist {
-        font-weight: bold;
-        margin:0;
-        
+        font-weight: normal;
+        margin: 0;
+
     }
 
     #branchlist:hover {
@@ -134,25 +142,31 @@
         },
         {
             name: 'Damak',
-            coordinates: [26.660069854885073, 87.69778292026827],
+            coordinates: [26.658942, 87.701977],
             email: 'hamal.mahesh45@gmail.com',
             phone: '9855036545'
         },
         {
             name: 'Ithari',
-            coordinates: [26.6621, 87.2707],
+            coordinates: [26.665972, 87.265503],
             email: 'hamal.mahesh45@gmail.com',
             phone: '9855036545'
         },
         {
             name: 'Biratnagar',
-            coordinates: [26.4562, 87.2728],
+            coordinates: [26.458989, 87.277689],
             email: 'hamal.mahesh45@gmail.com',
             phone: '9855036545'
         },
         {
-            name: 'Birgunj',
-            coordinates: [27.0092, 84.8770],
+            name: 'Birgunj-Birtamode Booking',
+            coordinates: [27.012703, 84.871075],
+            email: 'hamal.mahesh45@gmail.com',
+            phone: '9855036545'
+        },
+        {
+            name: 'Birgunj-Biratnagar Booking',
+            coordinates: [27.012835, 84.872331],
             email: 'hamal.mahesh45@gmail.com',
             phone: '9855036545'
         }

@@ -22,7 +22,7 @@ class Gallerycomponent extends Component
     public function render()
     {
         return view('livewire.gallerycomponent', [
-            'gallery' => GalleryModel::where('title', 'like', '%'.$this->search.'%')->paginate(12),
+            'gallery' => GalleryModel::where('title', 'like', '%'.$this->search.'%')->orderBy('gallery_id', 'desc')->paginate(12),
         ]);
     }
 }

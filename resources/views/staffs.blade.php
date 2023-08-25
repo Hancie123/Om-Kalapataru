@@ -37,38 +37,36 @@
     }
     </style>
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Staffs</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                    <li class="breadcrumb-item text-primary" aria-current="page">Staffs</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
 
 
-    <h1 class="wow fadeInUp text-center" data-wow-delay="0.1s">Om Kalpataru Carrier's Staffs</h1>
-<br><br>
+
+    <h1 class="wow fadeInUp text-center mt-5" data-wow-delay="0.1s">Om Kalpataru Branch Members</h1>
+    <br><br>
     <div class="container">
         <div class="row">
             @foreach ($alldata as $data)
-            <div class="col-md-2">
+
+
+            <div class="col-md-3 mb-3">
 
 
                 <div class="card wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="card-img-top" src="{{ asset('assets/' . $data->profile_picture) }}" alt="Card image"
-                        style="height:15rem;">
+                    <div style="max-width: 100%; height: auto;">
+                        @if($data->profile_picture && file_exists(public_path('assets/' . $data->profile_picture)))
+                        <img class="card-img-top" src="{{ asset('assets/' . $data->profile_picture) }}" alt="Card image"
+                            style="max-width: 100%; height: auto;">
+                        @else
+                        <img class="card-img-top" src="{{ asset('assets/img/logo.png') }}" alt="Card image"
+                            style="max-width: 100%; height: auto;">
+                        @endif
+                    </div>
+
                     <div class="card-body">
                         <p class="p-0 m-0">Name: {{$data->name}}</p>
                         <p class="p-0 m-0">Mobile no: {{$data->mobile}}</p>
                         </p>
                         <p class="p-0 m-0 text-light bg-primary rounded text-center">Incharge: {{$data->address}}</p>
-                        
+
                     </div>
                 </div>
 
