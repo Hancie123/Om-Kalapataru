@@ -1,15 +1,20 @@
 
 
-<!-- plugins:js -->
-<script src="{{asset('assets/js/vendor.bundle.base.js')}}"></script>
-    <script src="{{asset('assets/js/dataTables.select.min.js')}}"></script>
 
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{{asset('assets/js/off-canvas.js')}}"></script>
-    <script src="{{asset('assets/js/hoverable-collapse.js')}}"></script>
-    <script src="{{asset('assets/js/template.js')}}"></script>
-    <script src="{{asset('assets/js/settings.js')}}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <script src="{{asset('assets/js/dashboard.js')}}"></script>
+<script src="{{asset('assets/js/jquery.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.js')}}"></script>
+<script src="{{asset('assets/js/perfect-scrollbar.js')}}"></script>
+<script src="{{asset('assets/js/apexcharts.js')}}"></script>
+<script src="{{asset('assets/js/menu.js')}}"></script>
+<script src="{{asset('assets/js/main2.js')}}"></script>
+<script src="{{asset('assets/js/dashboards-analytics.js')}}"></script>
+<script src="{{asset('assets/js/popper.js')}}"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+

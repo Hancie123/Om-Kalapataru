@@ -47,6 +47,8 @@ class logincontroller extends Controller
 
         if($user->password==$request->password && $user->status=='Active'){
             Session::put('user_id',$user->user_id);
+            Session::put('name',$user->name);
+            Session::put('role',$user->role);
             return redirect('home/dashboard')->with('success','Welcome');
 
         }

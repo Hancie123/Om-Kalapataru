@@ -1,55 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
+    data-assets-path="{{url('assets')}}" data-template="vertical-menu-template-free">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Om Kalpataru Carriers | Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+
+    <meta name="description" content="" />
+
+
     @include('layouts/adminheader')
-    @livewireStyles
 </head>
 
 <body>
-    <div class="container-scroller">
-        @include('layouts/adminnavbar')
-        <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_settings-panel.html -->
-            <div class="theme-setting-wrapper">
-                <div id="settings-trigger"><i class='bx bx-cog'></i></div>
-                <div id="theme-settings" class="settings-panel">
-
-                    <i class='bx bx-x-circle settings-close'></i>
-                    <p class="settings-heading">SIDEBAR SKINS</p>
-                    <div class="sidebar-bg-options selected" id="sidebar-light-theme">
-                        <div class="img-ss rounded-circle bg-light border mr-3"></div>Light
-                    </div>
-                    <div class="sidebar-bg-options" id="sidebar-dark-theme">
-                        <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
-                    </div>
-                    <p class="settings-heading mt-2">HEADER SKINS</p>
-                    <div class="color-tiles mx-0 px-4">
-                        <div class="tiles success"></div>
-                        <div class="tiles warning"></div>
-                        <div class="tiles danger"></div>
-                        <div class="tiles info"></div>
-                        <div class="tiles dark"></div>
-                        <div class="tiles default"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="right-sidebar" class="settings-panel">
-                <h1>Hy</h1>
-            </div>
-
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
             @include('layouts/adminsidemenu')
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    <h2 class="text-center">Gallery Management System</h2><br>
 
-                    <div class="container rounded border p-3">
+            <!-- Layout container -->
+            <div class="layout-page">
+                @include('layouts/adminnavbar')
+
+                <!-- Content wrapper -->
+                <div class="container content-wrapper">
+                    <!-- Content -->
+
+
+
+
+
+                    <div class="container border rounded mt-3">
+                        <h2 class="p-3 text-dark text-center">Gallery Management System</h2>
                         <form action="{{url('/home/gallery/insert')}}" method="post" enctype="multipart/form-data">
                             @csrf
 
@@ -89,9 +75,9 @@
 
 
                     <div class="container mt-3 rounded border p-3">
-                        <table class="table rounded table-bordered">
-                            <thead class="table-primary">
-                                <tr>
+                        <table id="dataTable" class="table rounded table-bordered">
+                            <thead class="bg-dark color-light">
+                                <tr id="table-heading">
                                     <th>ID</th>
                                     <th>Image Title</th>
                                     <th>Image</th>
@@ -106,16 +92,17 @@
                                 <tr>
                                     <td>{{$data->gallery_id}}</td>
                                     <td>{{$data->title}}</td>
-                                    <td class="text-center"><img src="{{asset('assets/'.$data->image_path)}}" /></td>
+                                    <td class="text-center"><img src="{{asset('assets/'.$data->image_path)}}" class="rounded" style="width:60px;"/></td>
                                     <td>{{$data->updated_at}}</td>
-                                    <td class="text-center"><a href="{{url('/home/gallery/delete')}}/{{$data->gallery_id}}"
+                                    <td class="text-center"><a
+                                            href="{{url('/home/gallery/delete')}}/{{$data->gallery_id}}"
                                             class="btn btn-primary">Delete</a></td>
                                 </tr>
                                 @endforeach
                             </tbody>
 
                         </table>
-                        {{$gallery->links('pagination::bootstrap-5')}}
+                       
                     </div>
 
 
@@ -126,6 +113,59 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                    <script>
+                    $(document).ready(function() {
+                        // Initialize DataTables with styling
+                        $('#dataTable').DataTable({
+                            "paging": true,
+                            "lengthChange": true,
+                            "searching": true,
+                            "info": true,
+                            "autoWidth": false,
+                            "language": {
+                                "paginate": {
+                                    "next": "Next",
+                                    "previous": "Prev"
+                                }
+                            }
+                        });
+                    });
+                    </script>
+
+                    <style>
+                    .bg-dark.color-light th {
+                        color: white;
+                    }
+
+                    #dataTable_wrapper {
+                        padding: 20px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+
+                    /* Styling for pagination controls */
+                    .dataTables_paginate {
+                        margin-top: 10px;
+                    }
+
+                    /* Styling for search box */
+                    .dataTables_filter {
+                        margin-bottom: 10px;
+                    }
+                    </style>
 
 
 
@@ -148,15 +188,58 @@
                     }
                     </style>
 
-                   
+
+
+
                 </div>
+                <!-- / Content -->
+
+                <!-- Footer -->
+                <footer class="content-footer text-center footer bg-footer-theme p-2">
+
+                    ©
+                    <script>
+                    document.write(new Date().getFullYear());
+                    </script>
+                    , Designed by Hancie and Nitesh Hamal
+
+
+                </footer>
+                <!-- / Footer -->
+
+                <div class="content-backdrop fade"></div>
             </div>
+            <!-- Content wrapper -->
         </div>
-        <!-- page-body-wrapper ends -->
+        <!-- / Layout page -->
     </div>
-    <!-- container-scroller -->
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var greetingIconElement = document.getElementById("greeting-icon");
+        var greetingElement = document.getElementById("greeting");
+        var currentTime = new Date();
+        var currentHour = currentTime.getHours();
+
+        if (currentHour >= 5 && currentHour < 12) {
+            greetingIconElement.innerHTML = "&#128072;"; // Morning icon
+            greetingElement.textContent = "Good Morning";
+        } else if (currentHour >= 12 && currentHour < 15) {
+            greetingIconElement.innerHTML = "&#127774;"; // Afternoon icon
+            greetingElement.textContent = "Good Afternoon";
+        } else {
+            greetingIconElement.innerHTML = "&#127769;"; // Evening icon
+            greetingElement.textContent = "Good Evening";
+        }
+    });
+    </script>
+
     @include('layouts/adminfooter')
-    @livewireScripts
 </body>
 
 </html>

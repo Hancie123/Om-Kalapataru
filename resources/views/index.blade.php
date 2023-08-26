@@ -273,6 +273,25 @@
     <!-- Video Modal End -->
 
 
+    <div class="container py-4 py-xl-5">
+        <div class="row gy-4 gy-md-0">
+            <div class="wow fadeInUp col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" data-wow-delay="0.1s">
+                <div style="max-width: 350px;">
+                    <h1 class="fw-bold">Om Chaudary</h1>
+                    <h5>Co-founder</h5>
+                    <p class="my-3">Om Kalpataru Carriers Pvt. Ltd stands as a paramount transport company in Nepal. Our 
+                        commitment to excellence drives us to be the epitome of trust and reliability in the transportation
+                         sector. As Om Kalpataru Pvt. Ltd., our vision extends to becoming Nepal's premier and most 
+                         dependable transportation entity, ushering in a new era of industry standards.</p><a class="btn btn-primary btn-lg me-2" role="button" href="{{url('/contact')}}" wire:navigate>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="{{asset('assets/img/Om Chaudary.jpeg')}}"></div>
+            </div>
+        </div>
+    </div>
+
+
 
 
 
