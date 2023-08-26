@@ -24,16 +24,16 @@
 
             <li class="nav-item lh-1 me-2 mt-2">
                 <iframe scrolling="no" border="0" frameborder="0" marginwidth="0" marginheight="0"
-                                allowtransparency="true"
-                                src="https://www.ashesh.com.np/linknepali-time.php?dwn=only&font_color=333333&font_size=14&bikram_sambat=0&api=731273n184"
-                                width="120" height="23">
-                            </iframe>
-            
+                    allowtransparency="true"
+                    src="https://www.ashesh.com.np/linknepali-time.php?dwn=only&font_color=333333&font_size=14&bikram_sambat=0&api=731273n184"
+                    width="120" height="23">
+                </iframe>
+
             </li>
 
             <li class="nav-item lh-1 me-2 mt-2">
                 <a href="#"><i class='bx bx-bell bx-sm'></i></a>
-            
+
             </li>
 
             <!-- User -->
@@ -70,11 +70,28 @@
                         </a>
                     </li>
                     <li>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#calendarmodal">
+                            <i class='bx bx-calendar me-2'></i>
+                            <span class="align-middle">Calendar</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#unicodemodal">
+                            <i class='bx bx-calendar me-2'></i>
+                            <span class="align-middle">Nepali Unicode</span>
+                        </a>
+                    </li>
+
+
+                    @if(Session()->get('role')=='Admin')
+                    <li>
                         <a class="dropdown-item" href="{{url('/home/settings')}}">
                             <i class="bx bx-cog me-2"></i>
                             <span class="align-middle">Settings</span>
                         </a>
                     </li>
+                    @endif
                     <li>
                         <a class="dropdown-item" href="#">
                             <span class="d-flex align-items-center align-middle">
@@ -89,7 +106,7 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="auth-login-basic.html">
+                        <a class="dropdown-item" href="{{url('/logout')}}">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle">Log Out</span>
                         </a>
@@ -102,3 +119,81 @@
 </nav>
 
 <!-- / Navbar -->
+
+
+<!-- The Calendar Modal -->
+<div class="modal fade" id="calendarmodal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header bg-primary text-lighter">
+                <h4 class="modal-title text-center" style="color:white;">Om Kalpataru Carriers Calendar</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-7">
+                        <!-- Start of nepali calendar widget -->
+                        <script type="text/javascript">
+                        <!--
+                        var nc_width = 450;
+                        var nc_height = 250;
+                        var nc_api_id = 33920230826290; //
+                        -->
+                        </script>
+                        <script type="text/javascript" src="https://www.ashesh.com.np/calendarlink/nc.js"></script>
+
+
+                    </div>
+
+
+                    <div class="col-md-5">
+
+                        <iframe
+                            src="https://www.ashesh.com.np/linkdate-converter.php?h_color=21ADE2&b_color=CFE4B1&api=692185n233"
+                            frameborder="0" scrolling="no" marginwidth="0" marginheight="0"
+                            style="border:none; overflow:hidden; width:100%; height:250px;"
+                            allowtransparency="true"></iframe>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!------------ The Unicode Modal --------------->
+<div class="modal fade" id="unicodemodal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header bg-primary text-lighter">
+                <h4 class="modal-title text-center" style="color:white;">Nepali Unicode Typing</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+
+            <iframe width="100%" height="400" frameborder="0" border="no" 
+            scrolling="no" marginwidth="0" marginheight="0" allowtransparency="true" 
+            src="https://www.ashesh.com.np/linknepali-unicode3.php?api=692182n447">
+</iframe><br>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

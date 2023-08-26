@@ -145,7 +145,7 @@
                                                     <div id="imagePreview" class="mt-4">
                                                         <img src="#" alt="Image Preview"
                                                             class="img-fluid d-none border-light" style="width:80px;">
-                                                    </div>
+                                                    </div><br>
                                                 </div>
 
                                                 <div class="col-md-6">
@@ -153,13 +153,13 @@
                                                         <label id="label" style="color:white;" for="imageUpload">COMPANY
                                                             QR
                                                             LOGO</label><br>
-                                                        <input type="file" class="form-control-file" id="imageUpload"
+                                                        <input type="file" class="form-control-file" id="imageUpload2"
                                                             accept="image/*" style="color:white;">
                                                     </div>
-                                                    <div id="imagePreview" class="mt-4">
+                                                    <div id="imagePreview2" class="mt-4">
                                                         <img src="#" alt="Image Preview"
                                                             class="img-fluid d-none border-light" style="width:80px;">
-                                                    </div>
+                                                    </div><br>
                                                 </div>
 
 
@@ -280,6 +280,25 @@
                                 reader.onload = function(e) {
                                     $('#imagePreview img').attr('src', e.target.result);
                                     $('#imagePreview img').removeClass('d-none');
+                                }
+
+                                reader.readAsDataURL(input.files[0]);
+                            }
+                        });
+                    });
+                    </script>
+
+                    <script>
+                    $(document).ready(function() {
+                        $("#imageUpload2").change(function() {
+                            var input = this;
+
+                            if (input.files && input.files[0]) {
+                                var reader = new FileReader();
+
+                                reader.onload = function(e) {
+                                    $('#imagePreview2 img').attr('src', e.target.result);
+                                    $('#imagePreview2 img').removeClass('d-none');
                                 }
 
                                 reader.readAsDataURL(input.files[0]);
