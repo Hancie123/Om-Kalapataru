@@ -44,6 +44,11 @@
                                   <div data-i18n="Without navbar">Gallery</div>
                               </a>
                           </li>
+                          <li class="menu-item {{ request()->is('home/blogs') ? 'active' : '' }}">
+                              <a href="{{url('/home/blogs')}}" class="menu-link">
+                                  <div data-i18n="Without navbar">Blogs</div>
+                              </a>
+                          </li>
                           <li class="menu-item">
                               <a href="layouts-container.html" class="menu-link">
                                   <div data-i18n="Container">Announcements</div>

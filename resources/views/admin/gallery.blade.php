@@ -8,9 +8,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
-
-    <meta name="description" content="" />
+    <title>Dashboard - Gallery Management System</title>
 
 
     @include('layouts/adminheader')
@@ -74,7 +72,7 @@
                     </div>
 
 
-                    <div class="container mt-3 rounded border p-3">
+                    <div class="table-responsive  container mt-3 rounded border p-3">
                         <table id="dataTable" class="table rounded table-bordered">
                             <thead class="bg-dark color-light">
                                 <tr id="table-heading">
@@ -149,12 +147,7 @@
                         color: white;
                     }
 
-                    #dataTable_wrapper {
-                        padding: 20px;
-                        border: 1px solid #ddd;
-                        border-radius: 8px;
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    }
+                  
 
                     /* Styling for pagination controls */
                     .dataTables_paginate {
@@ -194,18 +187,7 @@
                 </div>
                 <!-- / Content -->
 
-                <!-- Footer -->
-                <footer class="content-footer text-center footer bg-footer-theme p-2">
-
-                    ©
-                    <script>
-                    document.write(new Date().getFullYear());
-                    </script>
-                    , Designed by Hancie and Nitesh Hamal
-
-
-                </footer>
-                <!-- / Footer -->
+               
 
                 <div class="content-backdrop fade"></div>
             </div>
@@ -219,25 +201,7 @@
     </div>
     <!-- / Layout wrapper -->
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var greetingIconElement = document.getElementById("greeting-icon");
-        var greetingElement = document.getElementById("greeting");
-        var currentTime = new Date();
-        var currentHour = currentTime.getHours();
-
-        if (currentHour >= 5 && currentHour < 12) {
-            greetingIconElement.innerHTML = "&#128072;"; // Morning icon
-            greetingElement.textContent = "Good Morning";
-        } else if (currentHour >= 12 && currentHour < 15) {
-            greetingIconElement.innerHTML = "&#127774;"; // Afternoon icon
-            greetingElement.textContent = "Good Afternoon";
-        } else {
-            greetingIconElement.innerHTML = "&#127769;"; // Evening icon
-            greetingElement.textContent = "Good Evening";
-        }
-    });
-    </script>
+    
 
     @include('layouts/adminfooter')
 </body>

@@ -10,6 +10,7 @@ use App\Http\Controllers\dashboardcontroller;
 use App\Http\Controllers\staffcontroller;
 use App\Http\Controllers\gallerycontroller;
 use App\Http\Controllers\settingcontroller;
+use App\Http\Controllers\blogcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +65,6 @@ Route::post('/home/gallery/insert',[gallerycontroller::class,'insertdata'])->mid
 Route::get('/home/gallery/delete/{id}',[gallerycontroller::class,'deletestaff'])->middleware('sessioncheck');
 
 Route::get('/home/settings',[settingcontroller::class,'settings'])->middleware('sessioncheck');
+
+
+Route::get('/home/blogs',[blogcontroller::class,'adminblog'])->middleware('sessioncheck');

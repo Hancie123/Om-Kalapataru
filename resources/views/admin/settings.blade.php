@@ -238,12 +238,7 @@
                         color: white;
                     }
 
-                    #dataTable_wrapper {
-                        padding: 20px;
-                        border: 1px solid #ddd;
-                        border-radius: 8px;
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    }
+                    
 
                     /* Styling for pagination controls */
                     .dataTables_paginate {

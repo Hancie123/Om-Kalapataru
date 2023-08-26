@@ -2132,7 +2132,7 @@ progress {
   margin-bottom: 0.5rem;
   font-size: 0.75rem;
   font-weight: 500;
-  color: #566a7f;
+  color: #000001;
 }
 
 .col-form-label {
@@ -2170,7 +2170,7 @@ progress {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.53;
-  color: #697a8d;
+  color: #000000;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #d9dee3;
@@ -2192,7 +2192,7 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: #697a8d;
+  color: #000204;
   background-color: #fff;
   border-color: rgba(249, 249, 255, 0.54);
   outline: 0;
@@ -2206,7 +2206,7 @@ progress {
   opacity: 1;
 }
 .form-control::placeholder {
-  color: #b4bdc6;
+  color: #000000;
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
@@ -2351,7 +2351,7 @@ textarea.form-control-lg {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.53;
-  color: #697a8d;
+  color: #000000;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%2867, 89, 113, 0.6%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;

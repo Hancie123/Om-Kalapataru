@@ -22,11 +22,11 @@
         <ul class="navbar-nav flex-row align-items-center ms-auto">
             <!-- Place this tag where you want the button to render. -->
 
-            <li class="nav-item lh-1 me-2 mt-2">
+            <li class="nav-item lh-1  mt-2">
                 <iframe scrolling="no" border="0" frameborder="0" marginwidth="0" marginheight="0"
                     allowtransparency="true"
                     src="https://www.ashesh.com.np/linknepali-time.php?dwn=only&font_color=333333&font_size=14&bikram_sambat=0&api=731273n184"
-                    width="120" height="23">
+                    width="115" height="23">
                 </iframe>
 
             </li>
