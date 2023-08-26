@@ -5973,14 +5973,14 @@ a.bg-lightest:hover, a.bg-lightest:focus {
 }
 
 .text-light {
-  color: #b4bdc6 !important;
+  color: #ffffff;
 }
 .text-light[href]:hover, .text-light[href]:focus {
-  color: #8e9baa !important;
+  color: #ffffff;
 }
 
 .text-lighter {
-  color: #c7cdd4 !important;
+  color: #ffffff ;
 }
 .text-lighter[href]:hover, .text-lighter[href]:focus {
   color: #8e9baa !important;

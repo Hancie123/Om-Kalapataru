@@ -42,7 +42,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="title" class="form-label">Title:</label>
-                                    <input type="text" class="form-control form-control-sm" id="image_title"
+                                    <input type="text" class="form-control" id="image_title"
                                         placeholder="Enter image title" name="image_title">
                                     @error('image_title')
                                     <span class="text-danger">{{$message}}</span>
@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="gallery_image" class="form-label">Image:</label>
-                                    <input type="file" class="form-control form-control-sm" placeholder="Upload image"
+                                    <input type="file" class="form-control" placeholder="Upload image"
                                         name="gallery_image">
                                     @error('gallery_image')
                                     <span class="text-danger">{{$message}}</span>

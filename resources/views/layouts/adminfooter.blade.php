@@ -1,5 +1,15 @@
 
+<!-- Footer -->
+<footer class="content-footer text-center footer bg-footer-theme p-2">
+©
+<script>
+document.write(new Date().getFullYear());
+</script>
+, Designed by Hancie and Nitesh Hamal
 
+
+</footer>
+<!-- / Footer -->
 
 <script src="{{asset('assets/js/jquery.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.js')}}"></script>

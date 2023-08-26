@@ -44,7 +44,7 @@
                             <div class="row mb-2">
                                 <div class="col-md-4 mb-2">
                                     <label for="name" class="form-label">Name:</label>
-                                    <input type="text" class="form-control form-control-sm" id="name"
+                                    <input type="text" class="form-control" id="name"
                                         wire:model.live="name" placeholder="Enter name" name="name">
                                     @error('name')
                                     <span class="text-danger">{{$message}}</span>
@@ -54,7 +54,7 @@
 
                                 <div class="col-md-4 mb-2">
                                     <label for="email" class="form-label">Email:</label>
-                                    <input type="text" class="form-control form-control-sm" wire:model.live="email"
+                                    <input type="text" class="form-control" wire:model.live="email"
                                         id="email" placeholder="Enter email" name="email">
                                     @error('email')
                                     <span class="text-danger">{{$message}}</span>
@@ -63,7 +63,7 @@
 
                                 <div class="col-md-4 mb-2">
                                     <label for="mobile" class="form-label">Mobile:</label>
-                                    <input type="text" class="form-control form-control-sm" wire:model.live="mobile"
+                                    <input type="text" class="form-control" wire:model.live="mobile"
                                         id="mobile" placeholder="Enter mobile" name="mobile">
                                     @error('mobile')
                                     <span class="text-danger">{{$message}}</span>
@@ -80,7 +80,7 @@
 
                                 <div class="col-md-4 mb-2">
                                     <label for="name" class="form-label">Address:</label>
-                                    <input type="text" class="form-control form-control-sm" id="address"
+                                    <input type="text" class="form-control" id="address"
                                         wire:model.live="address" placeholder="Enter address" name="address">
                                     @error('address')
                                     <span class="text-danger">{{$message}}</span>
@@ -90,7 +90,7 @@
                                 <div class="col-md-4 mb-2">
 
                                     <label for="mobile" class="form-label">Profile Pic:</label>
-                                    <input type="file" class="form-control form-control-sm"
+                                    <input type="file" class="form-control"
                                         placeholder="Upload profile_pic" name="profile_pic">
                                     @error('profile_pic')
                                     <span class="text-danger">{{$message}}</span>
@@ -100,7 +100,7 @@
 
                                 <div class="col-md-4 mb-2">
                                     <label for="mobile" class="form-label">Bio:</label>
-                                    <textarea class="form-control form-control-sm" name="bio"
+                                    <textarea class="form-control" name="bio"
                                         wire:model.blur="bio"></textarea>
                                     @error('bio')
                                     <span class="text-danger">{{$message}}</span>

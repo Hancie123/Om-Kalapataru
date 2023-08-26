@@ -9,6 +9,7 @@ use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\dashboardcontroller;
 use App\Http\Controllers\staffcontroller;
 use App\Http\Controllers\gallerycontroller;
+use App\Http\Controllers\settingcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +62,5 @@ Route::get('/gallery',[gallerycontroller::class,'gallery']);
 Route::get('/home/gallery',[gallerycontroller::class,'admingallery'])->middleware('sessioncheck');
 Route::post('/home/gallery/insert',[gallerycontroller::class,'insertdata'])->middleware('sessioncheck');
 Route::get('/home/gallery/delete/{id}',[gallerycontroller::class,'deletestaff'])->middleware('sessioncheck');
+
+Route::get('/home/settings',[settingcontroller::class,'settings'])->middleware('sessioncheck');
