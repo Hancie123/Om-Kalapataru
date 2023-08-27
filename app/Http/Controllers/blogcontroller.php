@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BlogModel;
 use Illuminate\Support\Facades\Storage;
+use App\Models\ContactModel;
 
 class blogcontroller extends Controller
 {
@@ -18,12 +19,14 @@ class blogcontroller extends Controller
         return view('blogshow',compact('blogs'));
     }
     public function adminblog(){
-        return view('admin/blogs');
+        $contact=ContactModel::orderBy('created_at','desc')->paginate(10);
+        return view('admin/blogs',compact('contact'));
     }
 
     public function viewblog(){
         $blogs=BlogModel::orderBy('blog_id','desc')->paginate(10);
-        return view('admin/view_blog',compact('blogs'));
+        $contact=ContactModel::orderBy('created_at','desc')->paginate(10);
+        return view('admin/view_blog',compact('blogs','contact'));
     }
 
     public function storeblog(Request $request)

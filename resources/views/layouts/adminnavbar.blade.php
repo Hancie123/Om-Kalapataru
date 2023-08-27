@@ -31,9 +31,44 @@
 
             </li>
 
-            <li class="nav-item lh-1 me-2 mt-2">
-                <a href="#"><i class='bx bx-bell bx-sm'></i></a>
+            <li class="nav-item lh-1 me-2 mt-2 dropdown navbar-dropdown dropdown-user">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown"><i
+                        class='bx bx-bell bx-sm notification-icon'>
+                        @if(count($contact)>=1)
+                        <span class="notification-badge">{{count($contact)}}</span>
+                        @endif</i></a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    @if(count($contact) === 0)
+                    <div class="dropdown-item text-dark">No Notification</div>
+                    @else
+                    <div class="dropdown-item text-dark mb-0">You have {{count($contact)}} notification(s)<a href="{{url('/home/contact/view')}}"
+                            class="btn-sm btn-primary text-danger">View All</a></div>
+                    @foreach($contact as $data)
+                    <hr class="dropdown-divider">
+                    <div class="container">
+                        <div class="row alert alert-success alert-dismissible fade show p-2 px-4">
+                            <div class="col-md-2 d-flex align-items-center justify-content-center">
+                                <i class='bx bx-message-rounded-error bx-md text-warning'></i>
+                            </div>
 
+                            <div class="col-md-10">
+                                <div class="" role="alert">
+                                    <h5 class="alert-heading text-dark">{{$data->name}}</h5>
+                                    <p class="mb-2 text-dark">{{$data->message}}</p>
+                                    <p class="text-dark">{{$data->created_at->diffForHumans()}}</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    @endforeach
+                    @endif
+
+                </ul>
             </li>
 
             <!-- User -->
@@ -92,16 +127,7 @@
                         </a>
                     </li>
                     @endif
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            <span class="d-flex align-items-center align-middle">
-                                <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                                <span class="flex-grow-1 align-middle">Billing</span>
-                                <span
-                                    class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                            </span>
-                        </a>
-                    </li>
+                    
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>
@@ -186,10 +212,10 @@
             <!-- Modal body -->
             <div class="modal-body">
 
-            <iframe width="100%" height="400" frameborder="0" border="no" 
-            scrolling="no" marginwidth="0" marginheight="0" allowtransparency="true" 
-            src="https://www.ashesh.com.np/linknepali-unicode3.php?api=692182n447">
-</iframe><br>
+                <iframe width="100%" height="400" frameborder="0" border="no" scrolling="no" marginwidth="0"
+                    marginheight="0" allowtransparency="true"
+                    src="https://www.ashesh.com.np/linknepali-unicode3.php?api=692182n447">
+                </iframe><br>
 
 
             </div>
@@ -197,3 +223,18 @@
         </div>
     </div>
 </div>
+
+<style>.notification-icon {
+    position: relative;
+}
+
+.notification-badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+}</style>

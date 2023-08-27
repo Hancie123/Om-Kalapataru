@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\StaffDetailModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\ContactModel;
 
 class staffcontroller extends Controller
 {
@@ -15,7 +16,8 @@ class staffcontroller extends Controller
     
     public function staffmanage(){
         $alldata=StaffDetailModel::all();
-        return view('admin/staff',compact('alldata'));
+        $contact=ContactModel::orderBy('created_at','desc')->paginate(10);
+        return view('admin/staff',compact('alldata','contact'));
     }
 
 

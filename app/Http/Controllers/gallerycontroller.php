@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 use App\Models\GalleryModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\ContactModel;
 
 class gallerycontroller extends Controller
 {
     public function admingallery(){
         $gallery = GalleryModel::orderBy('gallery_id', 'desc')->paginate(5);
-        return view('admin/gallery',compact('gallery'));
+        $contact=ContactModel::orderBy('created_at','desc')->paginate(10);
+        return view('admin/gallery',compact('gallery','contact'));
     }
 
     public function gallery(){
