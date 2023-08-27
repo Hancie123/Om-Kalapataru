@@ -11,12 +11,41 @@
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
     <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     @include('layouts/adminheader')
 </head>
 
 <body>
+    @if(session('success'))
+    @php
+    $success = Session::get('success');
+    $fail = Session::get('fail');
+    @endphp
+    <script>
+    Swal.fire({
+        title: '{{ $success }}',
+        width: 600,
+        padding: '3em',
+        backdrop: 'rgba(0, 0, 123, 0.4) left top no-repeat',
+    });
+    </script>
+    @endif
+
+    @if(session('fail'))
+    @php
+    $success = Session::get('success');
+    $fail = Session::get('fail');
+    @endphp
+    <script>
+    Swal.fire({
+        title: '{{ $fail }}',
+        width: 600,
+        padding: '3em',
+        backdrop: 'rgba(0, 0, 123, 0.4) left top no-repeat'
+    });
+    </script>
+    @endif
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -38,7 +67,7 @@
 
 
 
-                        <form method="post" action="{{url('/home/manage-staff/save')}}" enctype="multipart/form-data"
+                        <form method="post" action="{{url('/home/blogs/insert')}}" enctype="multipart/form-data"
                             class="p-3">
                             @csrf
 
@@ -60,6 +89,9 @@
                                         <option>Events</option>
                                         <option>Announcements</option>
                                         <option>Problems</option>
+                                        <option>Information</option>
+                                        <option>Politics</option>
+                                        <option>Transport System</option>
                                     </select>
                                     @error('category')
                                     <span class="text-danger">{{$message}}</span>
@@ -80,9 +112,6 @@
 
                             <div class="row">
 
-
-
-
                                 <div class="col-12">
                                     <input id="x" type="hidden" name="content">
                                     <trix-editor input="x"></trix-editor>
@@ -92,45 +121,16 @@
 
                             </div>
 
-<br>
+                            <br>
                             <button type="submit" class="btn btn-primary">Publish </button>
+                            <a  href="{{url('/home/blogs/view')}}" class="btn btn-primary">View Blogs </a>
                         </form>
                         <br>
                     </div>
 
-                    @if(Session()->has('success'))
-                    <div class="alert alert-success">
-                        <strong>Success!</strong> {{Session()->get('success')}}
-                    </div>
-                    @endif
-                    @if(Session()->has('fail'))
-                    <div class="alert alert-danger">
-                        <strong>Fail!</strong> {{Session()->get('fail')}}
-                    </div>
-                    @endif
 
-                    <div class="container mt-3 rounded border p-3">
-                        <table id="dataTable" class="table rounded table-bordered">
-                            <thead class="bg-dark color-light">
-                                <tr id="table-heading">
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Mobile</th>
-                                    <th>Email</th>
-                                    <th>Address</th>
-                                    <th>Bio</th>
-                                    <th>Image</th>
-                                    <th>Action</th>
 
-                                </tr>
-
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-
-                        </table>
-                    </div>
+                    
 
 
 
@@ -147,43 +147,43 @@
                         color: black;
                     }
 
-                    #page_title{
+                    #page_title {
                         font-family: 'Roboto', sans-serif;
-                        font-weight:600;
-                        font-size:18px;
+                        font-weight: 600;
+                        font-size: 18px;
                     }
 
                     trix-editor {
                         min-height: 200px;
-                        color:black;
-                        font-size:16px;
+                        color: black;
+                        font-size: 16px;
                     }
 
-                    .custom-input{
-                        color:black;
+                    .custom-input {
+                        color: black;
                     }
 
 
-                        .bg-dark.color-light th {
-                            color: white;
-                        }
+                    .bg-dark.color-light th {
+                        color: white;
+                    }
 
-                        #dataTable_wrapper {
-                            padding: 20px;
-                            border: 1px solid #ddd;
-                            border-radius: 8px;
-                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                        }
+                    #dataTable_wrapper {
+                        padding: 20px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
 
-                        /* Styling for pagination controls */
-                        .dataTables_paginate {
-                            margin-top: 10px;
-                        }
+                    /* Styling for pagination controls */
+                    .dataTables_paginate {
+                        margin-top: 10px;
+                    }
 
-                        /* Styling for search box */
-                        .dataTables_filter {
-                            margin-bottom: 10px;
-                        }
+                    /* Styling for search box */
+                    .dataTables_filter {
+                        margin-bottom: 10px;
+                    }
                     </style>
 
 

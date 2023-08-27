@@ -67,4 +67,9 @@ Route::get('/home/gallery/delete/{id}',[gallerycontroller::class,'deletestaff'])
 Route::get('/home/settings',[settingcontroller::class,'settings'])->middleware('sessioncheck');
 
 
+Route::get('/blogs',[blogcontroller::class,'blogs']);
+Route::get('/blogs/{slug}',[blogcontroller::class,'blogshow']);
 Route::get('/home/blogs',[blogcontroller::class,'adminblog'])->middleware('sessioncheck');
+Route::get('/home/blogs/view',[blogcontroller::class,'viewblog'])->middleware('sessioncheck');
+Route::get('/home/blogs/view/delete/{id}',[blogcontroller::class,'deleteblog'])->middleware('sessioncheck');
+Route::post('/home/blogs/insert',[blogcontroller::class,'storeblog'])->middleware('sessioncheck');

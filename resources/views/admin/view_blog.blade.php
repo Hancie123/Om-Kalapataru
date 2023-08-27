@@ -3,21 +3,49 @@
 <html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
     data-assets-path="{{url('assets')}}" data-template="vertical-menu-template-free">
 
+
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
-    <title>Dashboard - Gallery Management System</title>
+    <title>Dashboard - View Blogs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-
     @include('layouts/adminheader')
 </head>
 
 <body>
+@if(session('success'))
+    @php
+    $success = Session::get('success');
+    $fail = Session::get('fail');
+    @endphp
+    <script>
+    Swal.fire({
+        title: '{{ $success }}',
+        width: 600,
+        padding: '3em',
+        backdrop: 'rgba(0, 0, 123, 0.4) left top no-repeat',
+    });
+    </script>
+    @endif
+
+    @if(session('fail'))
+    @php
+    $success = Session::get('success');
+    $fail = Session::get('fail');
+    @endphp
+    <script>
+    Swal.fire({
+        title: '{{ $fail }}',
+        width: 600,
+        padding: '3em',
+        backdrop: 'rgba(0, 0, 123, 0.4) left top no-repeat'
+    });
+    </script>
+    @endif
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -32,97 +60,42 @@
                     <!-- Content -->
 
 
+                    <h4 id="page_title" class="p-2 pt-3  text-dark"><a class="btn btn-primary mx-3" href="{{ url()->previous() }}" wire:navigate><i class='bx bx-arrow-back'></i> Back</a>  View Blogs Data </h4> 
+                    
 
 
-
-                    <h4 id="page_title" class="p-2 pt-3  text-dark">Gallery Management System</h4>
-                    <div class="container border rounded mt-3">
-
-                        <form action="{{url('/home/gallery/insert')}}" method="post" enctype="multipart/form-data"
-                            class="p-3">
-                            @csrf
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label id="label" for="title" class="form-label">Title:</label>
-                                    <input type="text" class="form-control" id="image_title"
-                                        placeholder="Enter image title" name="image_title">
-                                    @error('image_title')
-                                    <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6">
-                                    <label id="label" for="gallery_image" class="form-label">Image:</label>
-                                    <input type="file" class="form-control" placeholder="Upload image"
-                                        name="gallery_image">
-                                    @error('gallery_image')
-                                    <span class="text-danger">{{$message}}</span>
-                                    @enderror
-                                </div>
-                            </div>
-
-
-                            <button type="submit" class="btn btn-primary mt-3">Save </button><br><br>
-                            @if(Session()->has('success'))
-                            <div class="alert alert-success">
-                                <strong>Success!</strong> {{Session()->get('success')}}
-                            </div>
-                            @endif
-                            @if(Session()->has('fail'))
-                            <div class="alert alert-danger">
-                                <strong>Fail!</strong> {{Session()->get('fail')}}
-                            </div>
-                            @endif
-                        </form>
-                    </div>
-
-
-                    <div class="table-responsive  container mt-3 rounded border p-3">
+                    <div class="table-responsive  mt-3 rounded border p-3">
                         <table id="dataTable" class="table rounded table-bordered">
                             <thead class="bg-dark color-light">
                                 <tr id="table-heading">
                                     <th>ID</th>
-                                    <th>Image Title</th>
+                                    <th>Title</th>
+                                    <th>Category</th>
+                                    <th>Content</th>
                                     <th>Image</th>
-                                    <th>Uploaded At</th>
                                     <th>Action</th>
 
                                 </tr>
 
                             </thead>
                             <tbody>
-                                @foreach($gallery as $data)
+                                @foreach($blogs as $data)
                                 <tr>
-                                    <td>{{$data->gallery_id}}</td>
+                                    <td>{{$data->blog_id}}</td>
                                     <td>{{$data->title}}</td>
-                                    <td class="text-center"><img src="{{asset('assets/'.$data->image_path)}}"
-                                            class="rounded" style="width:60px;" /></td>
-                                    <td>{{$data->updated_at}}</td>
-                                    <td class="text-center"><a
-                                            href="{{url('/home/gallery/delete')}}/{{$data->gallery_id}}"
+                                    <td>{{$data->category}}</td>
+                                    <td>{!! substr(strip_tags($data->content), 0, 250)!!}</td>
+                                    <td class="text-center"><img src="{{asset('assets/'.$data->blog_image)}}"
+                                            class="rounded" style="width:50px;" />
+                                    </td>
+                                    <td class="text-center"><a href="{{url('/home/blogs/view/delete')}}/{{$data->blog_id}}"
                                             class="btn btn-primary">Delete</a></td>
                                 </tr>
                                 @endforeach
                             </tbody>
 
                         </table>
-
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -161,8 +134,6 @@
                         font-weight: 600;
                         font-size: 18px;
                     }
-
-
 
                     .bg-dark.color-light th {
                         color: white;

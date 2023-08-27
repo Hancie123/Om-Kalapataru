@@ -9,8 +9,10 @@
     <meta charset="utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
     <title>Dashboard - Staff Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     @include('layouts/adminheader')
 </head>
 
@@ -29,21 +31,22 @@
                     <!-- Content -->
 
 
-
+                    <h4 id="page_title" class="p-2 pt-3  text-dark">Staff Details</h4>
                     <div class="container border rounded mt-3">
-                        <h2 class="p-3">Staff Details</h2>
 
 
 
 
-                        <form method="post" action="{{url('/home/manage-staff/save')}}" enctype="multipart/form-data">
+
+                        <form method="post" action="{{url('/home/manage-staff/save')}}" enctype="multipart/form-data"
+                            class="p-3">
                             @csrf
 
                             <div class="row mb-2">
                                 <div class="col-md-4 mb-2">
-                                    <label for="name" class="form-label">Name:</label>
-                                    <input type="text" class="form-control" id="name"
-                                        wire:model.live="name" placeholder="Enter name" name="name">
+                                    <label id="label" for="name" class="form-label">Name:</label>
+                                    <input type="text" class="form-control" id="name" wire:model.live="name"
+                                        placeholder="Enter name" name="name">
                                     @error('name')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -51,18 +54,18 @@
 
 
                                 <div class="col-md-4 mb-2">
-                                    <label for="email" class="form-label">Email:</label>
-                                    <input type="text" class="form-control" wire:model.live="email"
-                                        id="email" placeholder="Enter email" name="email">
+                                    <label id="label" for="email" class="form-label">Email:</label>
+                                    <input type="text" class="form-control" wire:model.live="email" id="email"
+                                        placeholder="Enter email" name="email">
                                     @error('email')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
                                 </div>
 
                                 <div class="col-md-4 mb-2">
-                                    <label for="mobile" class="form-label">Mobile:</label>
-                                    <input type="text" class="form-control" wire:model.live="mobile"
-                                        id="mobile" placeholder="Enter mobile" name="mobile">
+                                    <label id="label" for="mobile" class="form-label">Mobile:</label>
+                                    <input type="text" class="form-control" wire:model.live="mobile" id="mobile"
+                                        placeholder="Enter mobile" name="mobile">
                                     @error('mobile')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -77,9 +80,9 @@
 
 
                                 <div class="col-md-4 mb-2">
-                                    <label for="name" class="form-label">Address:</label>
-                                    <input type="text" class="form-control" id="address"
-                                        wire:model.live="address" placeholder="Enter address" name="address">
+                                    <label id="label" for="name" class="form-label">Address:</label>
+                                    <input type="text" class="form-control" id="address" wire:model.live="address"
+                                        placeholder="Enter address" name="address">
                                     @error('address')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -87,9 +90,9 @@
 
                                 <div class="col-md-4 mb-2">
 
-                                    <label for="mobile" class="form-label">Profile Pic:</label>
-                                    <input type="file" class="form-control"
-                                        placeholder="Upload profile_pic" name="profile_pic">
+                                    <label id="label" for="mobile" class="form-label">Profile Pic:</label>
+                                    <input type="file" class="form-control" placeholder="Upload profile_pic"
+                                        name="profile_pic">
                                     @error('profile_pic')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -97,9 +100,8 @@
                                 </div>
 
                                 <div class="col-md-4 mb-2">
-                                    <label for="mobile" class="form-label">Bio:</label>
-                                    <textarea class="form-control" name="bio"
-                                        wire:model.blur="bio"></textarea>
+                                    <label id="label" for="mobile" class="form-label">Bio:</label>
+                                    <textarea class="form-control" name="bio" wire:model.blur="bio"></textarea>
                                     @error('bio')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -150,7 +152,7 @@
                                     <td>{{$data->address}}</td>
                                     <td>{{$data->bio}}</td>
                                     <td class="text-center"><img src="{{asset('assets/'.$data->profile_picture)}}"
-                                    class="rounded" style="width:50px;" />
+                                            class="rounded" style="width:50px;" />
                                     </td>
                                     <td class="text-center"><a href="{{url('/home/manage-staff/delete')}}/{{$data->id}}"
                                             class="btn btn-primary">Delete</a></td>
@@ -186,10 +188,24 @@
                     </script>
 
                     <style>
-                   .bg-dark.color-light th {
-                        color: white;}
+                    #label {
+                        font-size: 14px;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 500;
+                        color: black;
+                    }
 
-                   
+                    #page_title {
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+
+                    .bg-dark.color-light th {
+                        color: white;
+                    }
+
+
 
                     /* Styling for pagination controls */
                     .dataTables_paginate {
@@ -229,7 +245,7 @@
                 </div>
                 <!-- / Content -->
 
-              
+
 
                 <div class="content-backdrop fade"></div>
             </div>
@@ -243,7 +259,7 @@
     </div>
     <!-- / Layout wrapper -->
 
-   
+
 
     @include('layouts/adminfooter')
 </body>

@@ -16,6 +16,7 @@
                         <a href="{{url('/services')}}" class="nav-item nav-link {{ request()->is('services') ? ' active' : '' }}" wire:navigate>Services</a>
                         <a href="{{url('/gallery')}}" class="nav-item nav-link {{ request()->is('gallery') ? ' active' : '' }}" wire:navigate>Gallery</a>
                         <a href="{{url('/staffs')}}" class="nav-item nav-link {{ request()->is('staffs') ? ' active' : '' }}" wire:navigate>Staffs</a>
+                        <a href="{{url('/blogs')}}" class="nav-item nav-link {{ request()->is('blogs') ? ' active' : '' }}" wire:navigate>Blogs</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
