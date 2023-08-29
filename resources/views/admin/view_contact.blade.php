@@ -70,14 +70,14 @@
 
                             </div>
 
-                            <div class="col-md-7 text-center">
+                            <div class="col-md-7">
                                 <p class="mt-4 text-dark mb-0">Email: {{$data->email}}</p>
                                 <p class="text-dark">Message: {{$data->message}}</p>
                                 <span class="time-right text-dark">{{$data->created_at->diffForHumans()}}</span>
                             </div>
 
                             <div class="col-md-2 d-flex justify-content-center align-items-center">
-                                <button class="btn btn-primary">Delete</button>
+                                <a href="{{url('/home/contact/view/delete')}}/{{$data->contact_id}}" class="btn btn-primary text-light">Delete</a>
                             </div>
 
 

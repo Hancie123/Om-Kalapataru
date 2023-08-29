@@ -9992,7 +9992,7 @@ button.list-group-item-gray.active {
 
 .text-light {
   --bs-text-opacity: 1;
-  color: #b4bdc6 !important;
+  color: white !important;
 }
 
 .text-dark {

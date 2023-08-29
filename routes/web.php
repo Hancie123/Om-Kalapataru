@@ -39,6 +39,7 @@ Route::get('/services',function(){
 Route::get('/contact',[contactcontroller::class,'contact']);
 Route::get('/contact/sendemail',[contactcontroller::class,'sendemail']);
 Route::get('/home/contact/view',[contactcontroller::class,'viewcontact'])->middleware('sessioncheck');
+Route::get('/home/contact/view/delete/{id}',[contactcontroller::class,'delete'])->middleware('sessioncheck');
 
 Route::get('/about-company',[aboutcompanycontroller::class,'aboutcompany']);
 Route::get('/company-vision',[companyvisioncontroller::class,'companyvision']);
