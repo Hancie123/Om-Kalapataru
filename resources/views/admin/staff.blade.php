@@ -32,7 +32,7 @@
 
 
                     <h4 id="page_title" class="p-2 pt-3  text-dark">Staff Details</h4>
-                    <div class="container border rounded mt-3">
+                    <div class="container border rounded mt-3 bg-light">
 
 
 
@@ -126,7 +126,7 @@
                     </div>
                     @endif
 
-                    <div class="table-responsive  mt-3 rounded border p-3">
+                    <div class="table-responsive  mt-3 rounded border p-3 bg-light table-bordered">
                         <table id="dataTable" class="table rounded table-bordered">
                             <thead class="bg-dark color-light">
                                 <tr id="table-heading">

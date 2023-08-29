@@ -11,6 +11,7 @@ use App\Http\Controllers\staffcontroller;
 use App\Http\Controllers\gallerycontroller;
 use App\Http\Controllers\settingcontroller;
 use App\Http\Controllers\blogcontroller;
+use App\Http\Controllers\documentcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,3 +76,6 @@ Route::get('/home/blogs',[blogcontroller::class,'adminblog'])->middleware('sessi
 Route::get('/home/blogs/view',[blogcontroller::class,'viewblog'])->middleware('sessioncheck');
 Route::get('/home/blogs/view/delete/{id}',[blogcontroller::class,'deleteblog'])->middleware('sessioncheck');
 Route::post('/home/blogs/insert',[blogcontroller::class,'storeblog'])->middleware('sessioncheck');
+
+
+Route::get('/home/documents',[documentcontroller::class,'viewdocuments'])->middleware('sessioncheck');

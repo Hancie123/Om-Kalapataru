@@ -92,9 +92,9 @@
 
     <style>
     .image-container2 {
-        width: 250px;
+        width: 350px;
         /* Set the desired size */
-        height: 250px;
+        height: 350px;
         /* Set the same desired size */
         overflow: hidden;
         /* Hide overflowing content */

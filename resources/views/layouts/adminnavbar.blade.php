@@ -127,6 +127,12 @@
                         </a>
                     </li>
                     @endif
+                    <li>
+                        <a class="dropdown-item" href="{{url('/home/documents')}}">
+                        <i class='bx bxs-file-doc me-2'></i>
+                            <span class="align-middle">Documents</span>
+                        </a>
+                    </li>
                     
                     <li>
                         <div class="dropdown-divider"></div>
